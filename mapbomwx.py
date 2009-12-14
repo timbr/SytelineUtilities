@@ -1,5 +1,4 @@
 import wx
-import images
 
 class ToolbarFrame(wx.Frame):
 
@@ -7,10 +6,6 @@ class ToolbarFrame(wx.Frame):
         wx.Frame.__init__(self, parent, id, 'Toolbars', size=(600, 700))
         self.panel = wx.Panel(self)
         self.panel.SetBackgroundColour('White')
-        statusBar = self.CreateStatusBar()
-        toolbar = self.CreateToolBar()
-        toolbar.AddSimpleTool(wx.NewId(), images.getNewBitmap(), "New", "Long help for 'New'")
-        toolbar.Realize()
         menuBar = wx.MenuBar()
         menu1 = wx.Menu()
         menuBar.Append(menu1, "&File")
